@@ -1,1 +1,31 @@
+import random
 
+print("=== Задача 1: Поиск максимального элемента ===")
+
+rows = 3
+cols = 4
+matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(1, 100))
+    matrix.append(row)
+
+print("Сгенерированная матрица:")
+for row in matrix:
+    print(row)
+
+max_value = matrix[0][0]
+max_row = 0
+max_col = 0
+
+for i in range(rows):
+    for j in range(cols):
+        if matrix[i][j] > max_value:
+            max_value = matrix[i][j]
+            max_row = i
+            max_col = j
+
+print(f"\nМаксимальный элемент: {max_value}")
+print(f"Находится в строке {max_row}, столбце {max_col}")
