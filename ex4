@@ -1,6 +1,6 @@
 import random
 
-print("\n Поиск элемента")
+print("\nПоиск элемента")
 
 rows = 3
 cols = 4
