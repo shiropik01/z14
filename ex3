@@ -1,1 +1,30 @@
+import random
 
+print("\n=== Задача 3: Фильтрация списка ===")
+
+rows = 3
+cols = 4
+matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(-10, 10))
+    matrix.append(row)
+
+print("Исходная матрица:")
+for row in matrix:
+    print(row)
+
+positive_matrix = []
+
+for i in range(rows):
+    positive_row = []
+    for j in range(cols):
+        if matrix[i][j] > 0:
+            positive_row.append(matrix[i][j])
+    positive_matrix.append(positive_row)
+
+print("\nМатрица только с положительными числами:")
+for row in positive_matrix:
+    print(row)
