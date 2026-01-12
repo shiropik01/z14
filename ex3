@@ -25,6 +25,6 @@ for i in range(rows):
             positive_row.append(matrix[i][j])
     positive_matrix.append(positive_row)
 
-print("\nМатрица только с положительными числами:")
+print("Матрица только с положительными числами:")
 for row in positive_matrix:
     print(row)
