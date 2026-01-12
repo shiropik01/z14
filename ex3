@@ -1,6 +1,6 @@
 import random
 
-print("Фильтрация списка")
+print("\n Фильтрация списка")
 
 rows = 3
 cols = 4
@@ -25,6 +25,6 @@ for i in range(rows):
             positive_row.append(matrix[i][j])
     positive_matrix.append(positive_row)
 
-print("Матрица только с положительными числами:")
+print("\nМатрица только с положительными числами:")
 for row in positive_matrix:
     print(row)
