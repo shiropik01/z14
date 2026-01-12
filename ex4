@@ -1,6 +1,6 @@
 import random
 
-print("\n=== Задача 4: Поиск элемента ===")
+print("\n Поиск элемента")
 
 rows = 3
 cols = 4
