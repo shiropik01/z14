@@ -1,1 +1,37 @@
+import random
 
+print("\n=== Задача 2: Подсчёт суммы ===")
+
+rows = 3
+cols = 3
+matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(1, 20))
+    matrix.append(row)
+
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+total_sum = 0
+row_sums = []
+
+for i in range(rows):
+    row_sum = 0
+    for j in range(cols):
+        row_sum += matrix[i][j]
+    row_sums.append(row_sum)
+    total_sum += row_sum
+    print(f"Сумма строки {i}: {row_sum}")
+
+print(f"Общая сумма: {total_sum}")
+
+max_row_index = 0
+for i in range(1, rows):
+    if row_sums[i] > row_sums[max_row_index]:
+        max_row_index = i
+
+print(f"Строка с максимальной суммой: {max_row_index} (сумма = {row_sums[max_row_index]})")
