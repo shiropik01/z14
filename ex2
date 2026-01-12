@@ -1,6 +1,6 @@
 import random
 
-print("\n=== Задача 2: Подсчёт суммы ===")
+print("Подсчёт суммы")
 
 rows = 3
 cols = 3
