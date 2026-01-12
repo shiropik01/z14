@@ -1,1 +1,14 @@
+print("\n=== Задача 5: Лут в рейде ===")
 
+N = int(input("Сколько предметов можно унести? "))
+print("Введите ценности предметов через пробел (например: 10 -5 3 7 -2): ")
+values = list(map(int, input().split()))
+
+values.sort(reverse=True)
+
+total = 0
+for i in range(N):
+    if i < len(values):
+        total += values[i]
+
+print(f"Максимальная суммарная ценность: {total}")
