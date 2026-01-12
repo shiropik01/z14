@@ -1,1 +1,29 @@
+import random
 
+print("\n=== Задача 4: Поиск элемента ===")
+
+rows = 3
+cols = 4
+matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(1, 5))
+    matrix.append(row)
+
+print("Матрица:")
+for row in matrix:
+    print(row)
+
+search_num = int(input("\nВведите число для поиска (1-5): "))
+
+found = False
+for i in range(rows):
+    for j in range(cols):
+        if matrix[i][j] == search_num:
+            print(f"Найдено в строке {i}, столбце {j}")
+            found = True
+
+if not found:
+    print("Элемент не найден")
